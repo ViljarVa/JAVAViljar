@@ -14,7 +14,12 @@ public class Lesson2 {
     // sisend: 5
     // vastus: {1, 2, 3, 4, 5}
     public static int[] generateArray(int n) {
-        return new int[0];
+        int [] array = new int [n];
+        for(int i = 0; i < n; i++){
+            array[i] = i + 1;
+        }
+
+        return array;
     }
 
     // TODO
@@ -24,7 +29,15 @@ public class Lesson2 {
     // Näide2: siend: -3
     // Väljund: -3, -2, -1, 0
     public static int[] decreasingArray(int n) {
-        return new int[0];
+        int[] result = new int [Math.abs(n) + 1];
+        for (int i = 0; i < result.length; i++) {
+            if (n>=0) {
+                result[i] = n - 1;
+            } else {
+                result [i] = n + 1;
+            }
+        }
+        return result;
     }
 
     // TODO

@@ -1,4 +1,4 @@
-package ee.bcs.java.solution;
+package ee.bcs.java.sample.solution;
 
 public class Lesson0 {
 
