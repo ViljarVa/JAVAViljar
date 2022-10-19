@@ -1,0 +1,10 @@
+GET http://localhost:8080/client
+Content-Type: application/json
+
+{
+  "firstname": "1",
+  "lastname": "2",
+  "address": "3"
+}
+
+###

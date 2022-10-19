@@ -1,0 +1,17 @@
+POST http://localhost:8080/client
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "address": "USA"
+
+}
+
+###
+
+
+
+GET http://localhost:8080/client
+Accept: application/json
+
