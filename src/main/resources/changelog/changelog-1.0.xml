@@ -36,4 +36,13 @@
             <column name="name" type="text"/>
         </createTable>
     </changeSet>
+    <changeSet id="2022-10-24 Add bank_accounts table" author="Viljar">
+        <createTable tableName="bank_accounts">
+            <column name="accounts_number" type="text">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="balance" type="text">
+            </column>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>

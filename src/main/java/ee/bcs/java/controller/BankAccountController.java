@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -45,6 +46,10 @@ public class BankAccountController {
     public String transferMoney(String fromAccount, String toAccount, Integer amount) {
         return bankService.transferMoney(fromAccount, toAccount, amount);
 
-
     }
+
+    // http://localhost:8080/bank/allAccounts
+    @GetMapping("bank/allAccounts")
+    public List<AccountDto> getAllAccounts() {return bankService.getAllAccounts();}
+
 }

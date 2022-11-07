@@ -14,7 +14,7 @@ public class SampleAccountRepository {
     private NamedParameterJdbcTemplate jdbcTemplate;
 
     public void f1(String accountNumber) {
-        String sql = "INSERT INTO account (account_number, balance) VALUES (:accountNumber, :balance)";
+        String sql = "INSERT INTO account (accounts_number, balance) VALUES (:accountNumber, :balance)";
         Map paramMap = new HashMap();
         paramMap.put("accountNumber", accountNumber);
         paramMap.put("balance", 0);
@@ -22,7 +22,7 @@ public class SampleAccountRepository {
     }
 
     public void updateBalance(String accountNumber, Integer newBalance){
-        String sql = "UPDATE account SET balance = :balance WHERE account_number = :accountNumber";
+        String sql = "UPDATE account SET balance = :balance WHERE accounts_number = :accountNumber";
         Map paramMap = new HashMap();
         paramMap.put("accountNumber", accountNumber);
         paramMap.put("balance", newBalance);
@@ -30,7 +30,7 @@ public class SampleAccountRepository {
     }
 
     public Integer getBalance(String accountNumber){
-        String sql = "SELECT balance FROM account WHERE account_number = :accountNumber";
+        String sql = "SELECT balance FROM account WHERE accounts_number = :accountNumber";
         Map paramMap = new HashMap();
         paramMap.put("accountNumber", accountNumber);
         return jdbcTemplate.queryForObject(sql, paramMap, Integer.class);
